@@ -121,7 +121,100 @@
     </div>
     <div class="col-md-1"></div>
 
+    <!--Modal: Free 6lack-->
+    <div class="modal" tabindex="-1" role="dialog" id="free">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">6lack - Free</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="document.getElementById('free').style.display='none'">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="~/Content/Images/6LackAlbum10.jpg" />
+                </div>
+                <div class="modal-footer">
+                    Ricardo Valdez Valentine Jr., known professionally as 6lack,
+                    is an American singer, rapper, and songwriter.
+                    He initially gained notable recognition following the release of his single,
+                    "Prblms", taken from his debut album, Free 6lack, which was released in November 2016
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal: All Eyez on me - Tupac Shakur-->
+    <div class="modal" tabindex="-1" role="dialog" id="alleyez">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">All Eyez on me - Tupac Shakur</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="document.getElementById('alleyez').style.display='none'">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="~/Content/Images/2pacAlbum1.jpg" />
+                </div>
+                <div class="modal-footer">
+                    Tupac Amaru Shakur, better known by his stage name 2Pac
+                    and by his alias Makaveli, was an American rapper and actor.
+                    He is widely considered to be one of the most influential rappers of all time.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal: Lethal Injection - IceCube-->
+    <div class="modal" tabindex="-1" role="dialog" id="lethal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Lethal Injection - IceCube</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="document.getElementById('lethal').style.display='none'">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="~/Content/Images/iceCubeAlbum3.jpg" />
+                </div>
+                <div class="modal-footer">
+                    O'Shea Jackson, known professionally as Ice Cube, 
+                    is an American rapper, actor, and filmmaker. 
+                    His lyrics on N.W.A's 1988 album Straight Outta Compton contributed 
+                    to gangsta rap's widespread popularity, and his political rap solo albums 
+                    of 1990 and 1991 were critically and commercially successful.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 
 </div>
+<script>
+    
+    window.addEventListener("load", function () {
+        
+        var bodyT = document.getElementsByTagName("tbody")[0];
+        var childrens = bodyT.children;
+        
+        childrens[1].onclick = function () {
+            
+            document.getElementById("free").style.display="block";
+        }
+        childrens[2].onclick = function () {
+            
+            document.getElementById("alleyez").style.display = "block";
+        }
+        childrens[3].onclick = function () {
 
+            document.getElementById("lethal").style.display = "block";
+        }
+ 
+    });
 
+</script>

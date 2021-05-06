@@ -1,7 +1,13 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color:black !important;
+    background-color: black !important;
+    font-family:Poppins-SemiBold !important;
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -139,8 +145,6 @@ textarea {
 :root * {
     /* Pause the animation */
     animation-play-state: paused;
-    /* Bind the animation to scroll */
-    animation-delay: calc(var(--scroll) * -1s);
     /* These last 2 properites clean up overshoot weirdness */
     animation-iteration-count: 1;
     animation-fill-mode: both;
@@ -417,3 +421,38 @@ span.psw {
     opacity:0.8;
 }
 
+.modal-body>img{
+    width:100%;
+    height:auto;
+}
+
+.modal-title{
+    text-align:center;
+}
+
+button.close {
+    padding: 5px;
+    cursor: pointer;
+    font-size: 42px;
+}
+
+.modal-content {
+    background-image: linear-gradient( 156deg, black,#021934, #1f0157, #8c008f);
+    color:white;
+    border-radius:19px;
+}
+
+.modal-header {
+    padding: 17px;
+    border-bottom: 4px solid #ffffff45;
+}
+
+.modal-footer {
+    padding: 17px;
+    border-top: 4px solid #ffffff45;
+    text-align:center;
+}
+
+.close{
+    color:white;
+}

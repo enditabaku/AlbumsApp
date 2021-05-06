@@ -201,6 +201,12 @@
     <Content Include="bin\roslyn\vbc.exe.config" />
     <Content Include="bin\roslyn\vbc.rsp" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="Content\fonts\Poppins-Black.ttf" />
+    <Content Include="Content\fonts\Poppins-Light.ttf" />
+    <Content Include="Content\fonts\Poppins-Medium.ttf" />
+    <Content Include="Content\fonts\Poppins-SemiBold.ttf" />
+    <Content Include="Content\fonts\Poppins-Bold.ttf" />
+    <Content Include="Content\fonts\Poppins-ExtraBold.ttf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

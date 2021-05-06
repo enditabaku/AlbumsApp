@@ -1,0 +1,419 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color:black !important;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.intro-img{
+    width:100%;
+    height:auto;
+    filter:blur(3px);
+    z-index:-2;
+}
+
+.col-md-12, .col-lg-12{
+    padding:0px !important;
+}
+
+.intro-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 6px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+@keyframes body {
+    to {
+        background-color: rgb(19, 48, 97);
+    }
+}
+
+.progress {
+    height: 3px;
+    width: 0%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: progress 1s linear;
+}
+
+@keyframes progress {
+    to {
+        background-color: rgb(20, 255, 226);
+        width: 100%;
+    }
+}
+
+.cube-wrap {
+    --size: 6vmin;
+    position: fixed;
+    top: 80%;
+    left: 96%;
+    width: 0px;
+    height: 0;
+    perspective: 20vmin;
+}
+
+.cube {
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+    animation: cube 1s linear;
+}
+
+@keyframes cube {
+    to {
+        transform: rotateX(360deg) rotateZ(45deg) rotateY(-45deg);
+    }
+}
+
+.side {
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    background-color: #eee;
+    backface-visibility: visible;
+    top: calc(var(--size) * -.5);
+    left: calc(var(--size) * -.5);
+}
+
+.top {
+    background-color: #fff;
+    transform: rotateX(90deg) translateZ(calc(var(--size) * .5));
+}
+
+.bottom {
+    background-color: #c5c5c5;
+    transform: rotateX(90deg) translateZ(calc(var(--size) * -.5));
+}
+
+.left {
+    background-color: #e8e8e8;
+    transform: rotateY(90deg) translateZ(calc(var(--size) * .5));
+}
+
+.right {
+    background-color: #ddd;
+    transform: rotateY(90deg) translateZ(calc(var(--size) * -.5));
+}
+
+.front {
+    background-color: #d4d4d4;
+    transform: translateZ(calc(var(--size) * .5));
+}
+
+.back {
+    background-color: #dedede;
+    transform: translateZ(calc(var(--size) * -.5));
+}
+
+:root * {
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+#third-row{
+    margin-top:2%;
+}
+
+.row {
+    margin-top: 3%;
+    margin-left: 2%;
+}
+
+
+.img-rounded{
+    width:100%;
+    border:10px white solid;
+}
+
+.vl {
+    border-left: 5px solid #030c75;
+    height: 400px;
+}
+
+.col-md-1{
+    padding-left:45px;
+}
+
+#title {
+    text-align: center;
+}
+
+h1{
+    font-size:50px !important;
+    color:white;
+}
+
+h1:hover {
+    font-size: 53px;
+    color: #070061;
+}
+
+h2{
+    font-size:38px !important;
+}
+
+.highlight > .img-rounded:hover {
+    border: 20px solid #070061;
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.img-rounded{
+    visibility:hidden;
+}
+.fadeIn {
+    -webkit-animation: animat_show 0.8s;
+    animation: animat_show 0.8s;
+    visibility: visible !important;
+}
+
+@-webkit-keyframes animat_show {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+/*Charts page Section*/
+#chartTitle{
+    font-family:inherit;
+    color:#c5c5c5;
+}
+
+h2:hover {
+    font-size: 53px;
+    color: white;
+}
+
+#hiphop{
+    width:100%;
+
+}
+
+table{
+    color:white;
+    background-color:transparent;
+    width:100%;
+    border:3px white solid;
+}
+
+tr, td{
+    border:1px white solid;
+}
+
+td{
+    padding:10px !important;
+}
+
+    tr:hover {
+        background-color: #02152e;
+    }
+
+
+/*Login page Section*/
+
+#blueGoldImg {
+    width: 100%;
+    height: auto;
+    z-index: -2;
+}
+
+#loginSection {
+    margin-top: 3%;
+
+}
+
+
+input[type=text], input[type=password], input[type=email], input[type=tel], input[type=date] {
+    width: 100%;
+    padding: 11px 20px;
+    margin: 12px 0;
+    display: inline-block;
+    border: 1px solid #767575;
+    box-sizing: border-box;
+    color: #1d1d1d;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #02152e;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+}
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #7d130b;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  
+    margin: 12px 0px 0px 270px;
+    position: relative;
+}
+
+img.avatar {
+    width: 30%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position:fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: -35px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 10px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+#registerBtn{
+    color:white;
+}
+
+#registerBtn:hover{
+    opacity:0.8;
+}
+

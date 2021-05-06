@@ -1,0 +1,154 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+<!--Getting scripts for bootstrap and jquery-->
+<script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--Getting stylesheets-->
+<link href="~/Content/css/Site.css" rel="stylesheet" />
+<link href="~/Content/css/login.css" rel="stylesheet" />
+<!--Meta tags-->
+<meta name="description" content="Music App">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+
+<!--This row includes LogIn Section-->
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8" id="loginSection">
+        <img id="blueGoldImg" src="~/Content/Images/blue gold.jpg" />
+        <div class="intro-text">
+            <div class="container" style="width:100%;">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" id="username" value="">
+                <br />
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="password" value="">
+                <br />
+                <br />
+                <button type="submit" onclick="Login()" id="loginBtn">Login</button>
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; background-color:#9a752a">Register</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+
+
+<!--This modal includes Register section-->
+<div id="id01" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post" style="width:54%; padding-left:4%;">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="~/Content/Images/avatar.png" alt="Avatar" class="avatar">
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="uname"><b>Username:</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+            </div>
+            <div class="col-md-6">
+                <label for="uname"><b>About you:</b></label>
+                <input type="text" placeholder="Enter Your Bio" name="uname">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <label for="email"><b>Your email:</b></label>
+                <input type="email" placeholder="name@domain.com" name="email" required>
+            </div>
+            <div class="col-md-6">
+                <label for="date"><b>Birthday:</b></label>
+                <input type="date" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <label for="tel"><b>Cellphone:</b></label>
+                <input type="tel" placeholder="(###) ## ## ## ###" pattern="\(\d{3}-\d{4}" required />
+            </div>
+            <div class="col-md-6">
+                <label for="psw"><b>Your address:</b></label>
+                <input type="text" placeholder="Enter address" name="uname">
+            </div>
+        </div>
+
+        <div class="row" style="margin-left:-4%;">
+            <div class="col-md-6">
+                <label for="psw"><b>Password:</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+            </div>
+            <div class="col-md-6">
+                <label for="psw"><b>Confirm:</b></label>
+                <input type="password" placeholder="Confirm Password" name="psw" required>
+            </div>
+
+
+
+            <br />
+            <span>Here are some special chars you can copy and use: &#235; &nbsp; &#246; &nbsp; &#231; &nbsp; &#339; </span>
+        </div>
+
+        <div class="row" style="margin-left:30%; margin-bottom:5%; margin-top:2%;">
+            <button type="submit" id="registerBtn">Register</button>
+        </div>
+    </form>
+</div>
+
+<div id="id02" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="swal2-icon swal2-success swal2-animate-success-icon" style="display: flex;">
+                    <div class="swal2-success-circular-line-left" style="background-color: rgb(255, 255, 255);"></div>
+                    <span class="swal2-success-line-tip"></span>
+                    <span class="swal2-success-line-long"></span>
+                    <div class="swal2-success-ring"></div>
+                    <div class="swal2-success-fix" style="background-color: rgb(255, 255, 255);"></div>
+                    <div class="swal2-success-circular-line-right" style="background-color: rgb(255, 255, 255);"></div>
+                </div>
+                <p>Successfully logged in!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    function Login() {
+        var username = document.getElementById("username");
+        var password = document.getElementById("password");
+        var login = document.getElementById("loginBtn");
+
+        if (username.value == "" && password.value == "") {
+
+        }
+        else {
+            // Get the modal
+            var modalLogin = document.getElementById('id02');
+            modalLogin.style.display = "block";
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modalLogin) {
+                    modalLogin.style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
